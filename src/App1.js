@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Main from './components/main'
 import Cocktails from './components/cocktail-list'
+import CocktailData from './components/cocktaildata'
 
 import Nav from './components/nav'
 import Footer from './components/footer'
@@ -10,18 +11,16 @@ const App = () => {
   return (
 
   <BrowserRouter>
-  <div id="img" style={{ 
-    backgroundImage: `url("https://yesofcorsa.com/wp-content/uploads/2017/12/Alcoholic-Cocktails-Wallpaper-Full-HD.jpg")` 
-  }}>
     <Nav />
       <main>
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<Main />}></Route>
           <Route path='/cocktails' element={<Cocktails />} />
+          <Route path='/' Component={Cocktails} />
+          <Route path='/cocktails/:name' Component={CocktailData} />
         </Routes>
       </main>
     <Footer />
-    </div>
   </BrowserRouter>
   )
 }

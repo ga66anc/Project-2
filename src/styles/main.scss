@@ -1,9 +1,36 @@
 main{
-  height: 90vh;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+}
+
+.mains{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: stretch;
+  height: 100%;
+}
+
+#random{
+  height: 59px;
+  width: 100%;
+  border-block-color: unset;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#root {
+  background-image: url('https://yesofcorsa.com/wp-content/uploads/2017/12/Alcoholic-Cocktails-Wallpaper-Full-HD.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #img{
@@ -19,9 +46,82 @@ h1, footer, nav, p, #text{
   font-family: Rubik;
 }
 
-.cocktail-list{
-  display: block;
+.cocktail-grid1 {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.cocktail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cocktail-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+}
+
+.cocktail-card:hover {
+  transform: scale(1.05);
+}
+
+.cocktail-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.cocktail-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.view-details-button {
   background-color: aqua;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.view-details-button:hover {
+  background-color: #00bcd4;
+}
+
+.random-cocktail-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 100%;
+}
+
+.random-cocktail-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 400px;
+}
+
+.cocktail-image {
+  max-width: 100%;
+  height: auto;
 }
 
 footer{
@@ -32,4 +132,14 @@ footer{
 a{
   padding-right: 5px;
   text-decoration: none;
+}
+
+h1{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.loading-gif {
+  width: 150px;
+  height: auto;
 }
